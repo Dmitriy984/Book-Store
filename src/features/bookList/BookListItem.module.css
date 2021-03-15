@@ -1,0 +1,43 @@
+.bookListItem {
+    margin: 15px 0;
+    padding: 0 15px;
+}
+
+.bookListItem .bookCover {
+    max-width: 16rem;
+    margin: 0 auto;
+}
+
+.bookListItem .bookCover img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bookListItem .bookDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px 25px 10px;
+    margin-left: 5px;
+}
+
+.bookListItem .bookDetails .bookTitle {
+    font-size: 1.3rem;
+    line-height: 100%;
+    margin: 10px 0;
+}
+
+.bookListItem .bookDetails .bookAuthor {
+    margin-bottom: 0.3rem;
+}
+
+.bookListItem .bookDetails .bookPrice {
+    font-size: 1.3rem;
+    margin: 0;
+    float: left;
+}
+
+.bookListItem .bookDetails .bookPrice {
+    float: right;
+}

@@ -1,0 +1,25 @@
+.shoppingCartTable {
+  margin-top: 3rem;
+}
+
+.shoppingCartTable h2 {
+  text-align: center;
+}
+
+.shoppingCartTable .table {
+  margin-top: 2.5rem;
+  width: 100%;
+  text-align: center;
+  border-bottom: 0.15rem solid cadetblue;
+}
+
+.shoppingCartTable .total {
+  text-align: right;
+  font-size: 1.2rem;
+  margin: .5rem .4rem;
+  padding-bottom: .75rem;
+}
+
+.shoppingCartTable button {
+  margin-right: 0.3rem;
+}
