@@ -24,16 +24,13 @@ const updateCarItem = (book, item = {}, quantity) => {
 };
 
 const updateOrder = (state, bookISBN, quantity) => {
-  const { bookList, shoppingCart } = state;
-  const book = bookList.books.find(({ ISBN }) => ISBN === bookISBN);
-  const itemIndex = shoppingCart.cartItems.findIndex(
-    ({ ISBN }) => ISBN === bookISBN
-  );
-  const item = shoppingCart.cartItems[itemIndex];
+  const book = state.books.find(({ ISBN }) => ISBN === bookISBN);
+  const itemIndex = state.cartItems.findIndex(({ ISBN }) => ISBN === bookISBN);
+  const item = state.cartItems[itemIndex];
   const newItem = updateCarItem(book, item, quantity);
 
   return {
-    cartItems: updateCartItems(shoppingCart.cartItems, newItem, itemIndex),
+    cartItems: updateCartItems(state.cartItems, newItem, itemIndex),
     orderTotal: 0,
   };
 };
