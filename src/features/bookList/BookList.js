@@ -4,7 +4,7 @@ import withBookstoreApi from "../../common/hoc/withBookstoreApi";
 import compose from "../../common/utils/compose";
 import BookListItem from "./BookListItem";
 import { booksLoaded, booksRequested, booksError } from "./booListSlice";
-import { bookAddedToCart } from '../shoppingCartTable/shoppingCartSlice';
+import { bookAddedToCart } from "../shoppingCartTable/shoppingCartSlice";
 import Spinner from "../../common/genericComponents/Spinner";
 import ErrorIndicator from "../../common/genericComponents/ErrorIndicator";
 import styles from "./BookList.module.css";
@@ -15,9 +15,10 @@ const BookList = ({ books, onAddedToCart }) => {
       {books.map((book) => {
         return (
           <li className="col-sm-4" key={book.ISBN}>
-            <BookListItem 
+            <BookListItem
               book={book}
-              onAddedToCart={() => onAddedToCart(book.ISBN)} />
+              onAddedToCart={() => onAddedToCart(book.ISBN)}
+            />
           </li>
         );
       })}
@@ -25,14 +26,13 @@ const BookList = ({ books, onAddedToCart }) => {
   );
 };
 
-
 class BookListContainer extends Component {
   componentDidMount() {
     const {
       bookstoreApi,
       booksLoaded,
       booksRequested,
-      booksError
+      booksError,
     } = this.props;
 
     booksRequested();
@@ -53,11 +53,7 @@ class BookListContainer extends Component {
       return <ErrorIndicator />;
     }
 
-    return (
-      <BookList 
-        books={books}
-        onAddedToCart={onAddedToCart} />
-    );
+    return <BookList books={books} onAddedToCart={onAddedToCart} />;
   }
 }
 
@@ -70,8 +66,8 @@ const mapDispatchToProps = (dispatch) => {
     booksLoaded: (books) => dispatch(booksLoaded(books)),
     booksRequested: () => dispatch(booksRequested()),
     booksError: () => dispatch(booksError()),
-    onAddedToCart: (id) => dispatch(bookAddedToCart(id))
-  }
+    onAddedToCart: (id) => dispatch(bookAddedToCart(id)),
+  };
 };
 
 export default compose(

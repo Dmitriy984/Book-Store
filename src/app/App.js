@@ -1,9 +1,9 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Header from './Header';
-import HomePage from '../pages/HomePage';
-import CartPage from '../pages/CartPage';
-import './App.module.css';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Header from "./Header";
+import HomePage from "../pages/HomePage";
+import CartPage from "../pages/CartPage";
+import "./App.module.css";
 
 export default function App() {
   return (
@@ -16,4 +16,3 @@ export default function App() {
     </div>
   );
 }
-
