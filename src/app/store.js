@@ -1,10 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import bookListReducer from '../features/bookList/booListSlice';
-import shoppingCartReducer from '../features/shoppingCartTable/shoppingCartSlice';
+import rootReducer from './rootReducer';
 
-export default configureStore({
-  reducer: {
-    bookList: bookListReducer,
-    shoppingCart: shoppingCartReducer
-  },
+const store = configureStore({
+  rootReducer
 });
+
+export default store;

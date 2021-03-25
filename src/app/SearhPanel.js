@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './SearchPanel.module.css';
+import React from "react";
+import styles from "./SearchPanel.module.css";
 
 export default function SearchPanel() {
   return (

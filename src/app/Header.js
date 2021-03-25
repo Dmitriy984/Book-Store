@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from'./Header.module.css';
-import SearchPanel from './SearhPanel';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./Header.module.css";
+import SearchPanel from "./SearhPanel";
 
 export default function Header({ numItems, total }) {
   return (
